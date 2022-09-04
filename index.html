@@ -50,9 +50,57 @@
         <section class="section hero">
             <div class="container">
                 <h1 class="section-title hero">Эффективные решения для вашего бизнеса</h1>
-                <button type="button" class="btn-order"> Заказать услугу</button>
+                <button data-modal-open type="button" class="btn-order"> Заказать услугу</button>
             </div>
-        </section>
+        <div data-modal class="backdrop is-hidden">
+            <div class="modal">
+                <button data-modal-close type="button" class="btn-modal-close">
+                    <svg class="icon-close">
+                        <use href="./images/icons/symbol-defs.svg#icon-close"></use>
+                    </svg>
+                </button>
+                <form class="modal-form">
+                    <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+                
+                    <div class="form-field">
+                        <label for="modal-name">Имя</label>
+                        <input class="input-field name" type="text" name="modal-name" id="modal-name">
+                    </div>
+                
+                    <div class="form-field">
+                        <label for="modal-tel">Телефон</label>
+                        <input class="input-field tel" type="tel" name="modal-tel" id="modal-tel">
+                    </div>
+                
+                    <div class="form-field">
+                        <label for="modal-mail">Почта</label>
+                        <input class="input-field mail" type="mail" name="modal-mail" id="modal-mail">
+                    </div>
+                
+                    <div class="form-field">
+                        <label for="modal-comment">Комментарий</label>
+                        <textarea class="input-field comment" name="modal-comment" id="modal-comment" cols=""
+                            rows="">Введите текст</textarea>
+                    </div>
+                
+                    <div class="form-checkbox">
+                        <input class="checkbox-field" type="checkbox" name="modal-checkbox" value="" id="modal-checkbox">
+                        <label for="modal-checkbox">Соглашаюсь с рассылкой и принимаю <a class="link-contract" href="">Условия
+                                Договора</a> </label>
+                    </div>
+                
+                    <div class="btn-form-send">
+                        <button type="submit" class="modal-btn-send">Отправить</button>
+                    </div>
+                
+                
+                
+                </form>
+                
+                </div>
+                </div>
+                
+                </section>
 
         <!-- Cписок особливостей -->
         <section class="section feature">
@@ -103,9 +151,21 @@
             <div class="container">
                 <h2 class="section-title work">Чем мы занимаемся</h2>
                 <ul class="work-list list">
-                    <li class="item"><img src="./images/box1.jpg" alt="photo1" width="370"></li>
-                    <li class="item"><img src="./images/box2.jpg" alt="photo2" width="370"></li>
-                    <li class="item"><img src="./images/box3.jpg" alt="photo3" width="370"></li>
+                    <li class="item"><img src="./images/box1.jpg" alt="photo1" width="370" class="work-img">
+                        <div class="work-text-position">
+                        <p>Десктопные приложения</p>
+                    </div>
+                </li>
+                    <li class="item"><img src="./images/box2.jpg" alt="photo2" width="370" class="work-img">
+            <div class="work-text-position">
+              <p>Мобильные приложения</p>
+            </div>
+          </li>
+                    <li class="item"><img src="./images/box3.jpg" alt="photo3" width="370" class="work-img">
+            <div class="work-text-position">
+              <p>Дизайнерские решения</p>
+            </div>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -369,8 +429,20 @@
                     </li>
                 </ul>
             </div>
+            <!-- ФОРМА ФУТЕР -->
+            <div class="form-sumbit">
+                <form>
+                    <label for="user-email-footer">Подпишитесь на рассылку</label>
+                    <input type="email" name="user-email-footer" id="user-email-footer" placeholder="E-mail">
+                    <button type="submit" class="footer-form-btn">Подписаться<svg class="form-icon-send">
+                            <use href="./images/icons/symbol-defs.svg#icon-send"></use>
+                        </svg></button>
+                </form>
+            </div>
         </div>
     </footer>
+
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
